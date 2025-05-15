@@ -49,7 +49,6 @@ public class GitHelper
                         {
                             continue;
                         }
-
                         messages.Add(FormatCommitInfo(gitEvent, commit));
                     }
                 }
@@ -60,6 +59,7 @@ public class GitHelper
                 if (payload != null && payload.PullRequest != null)
                 {
                     var pullreq = payload.PullRequest;
+
                     messages.Add(FormatPullRequestInfo(gitEvent, pullreq));
                 }
             }

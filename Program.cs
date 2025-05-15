@@ -25,14 +25,16 @@ public class Program
             }
 
             DisplaySuccessMessasge($"Here are the latest activities for the user: {username}\n");
+            int Count = 0;
             foreach (var activity in activities)
             {
                 if (activity == null)
                 {
                     continue;
                 }
-
+                Console.WriteLine("Activity " + ++Count);    
                 Console.WriteLine(activity);
+                Console.WriteLine("--------------------------------------------------");
             }
             DisplaySuccessMessasge("\n Press any key to exit...");
             Console.ReadKey();
@@ -57,6 +59,4 @@ public class Program
         Console.WriteLine(message);
         Console.ResetColor();
     }
-
-
 }
